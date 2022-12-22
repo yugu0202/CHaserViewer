@@ -1,1 +1,3 @@
 # CHaserLogViewer
+
+これはcompactCHaserServerで生成されたログを元にグラフィカルに対戦を表示するものです
