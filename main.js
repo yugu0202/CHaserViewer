@@ -44,13 +44,13 @@ function View() {
 				var img_path = ""
 				switch (line[x]) {
 					case 0:
-						img_path = '../img/None.png';
+						img_path = 'img/None.png';
 						break;
 					case 2:
-						img_path = '../img/Block.png';
+						img_path = 'img/Block.png';
 						break;
 					case 3:
-						img_path = '../img/Item.png';
+						img_path = 'img/Item.png';
 						break;
 				}
 				object.image = core.assets[img_path];
@@ -63,7 +63,7 @@ function View() {
 		pointer = pointer + size_y;
 
 		cool = new Sprite(32, 32);
-		cool.image = core.assets['../img/Cool.png'];
+		cool.image = core.assets['img/Cool.png'];
 		var [ cool_x, cool_y ] = log[pointer].split(/,/).map( str => parseInt(str, 10));
 		console.log(cool_x);
 		console.log(cool_y);
@@ -73,7 +73,7 @@ function View() {
 		pointer++;
 
 		hot = new Sprite(32, 32);
-		hot.image = core.assets['../img/Hot.png'];
+		hot.image = core.assets['img/Hot.png'];
 		var [ hot_x, hot_y ] = log[pointer].split(/,/).map( str => parseInt(str, 10));
 		console.log(hot_x);
 		console.log(hot_y);
@@ -144,7 +144,7 @@ function View() {
 	console.log(size_y);
 
 	var core = new Core(672, 672);
-	core.preload(['../img/None.png','../img/Block.png','../img/Item.png','../img/Cool.png','../img/Hot.png']);
+	core.preload(['img/None.png','img/Block.png','img/Item.png','img/Cool.png','img/Hot.png']);
 	core.onload = function() {
 		log = log.slice(3);
 		MapView(0);
